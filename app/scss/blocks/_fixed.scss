@@ -25,7 +25,7 @@
     flex-basis: 38px;
     flex-shrink: 0;
     cursor: pointer;
-    //margin-right: 11.3%;
+  
 
     span{
       display: block;
@@ -41,4 +41,84 @@
 .fixed_repair {
    margin: auto;
 
+}
+
+.fixed_map {
+  padding-left: 48px;
+  background-image: url("../images/map.png") ;
+  background-repeat: no-repeat;
+  background-position: left center;
+  //padding: 24px 0 24px 48px;
+  display: none;
+  margin: auto;
+  margin-left: 0px;
+}
+
+.fixed_phone {
+ // margin: auto;
+  a {
+    display: block;
+    text-decoration: none;
+  }
+  img {
+    display: block;
+  }
+  span {
+    display: none;
+    font-size: px-to-rem(22px);
+    line-height: px-to-rem(28px);
+    color: $white
+  }
+}
+
+.fixed_btn {  
+  @include btn {
+    display: none;
+    margin: auto;
+    margin-right: 0px;
+    max-width: 146px;
+  }
+}
+
+.fixed_callback {
+  display: none;
+  font-size: px-to-rem(14px);
+  line-height: px-to-rem(18px);
+  margin-left: 15px;
+  margin-right: 0px;
+
+}
+
+@media (min-width: 480px) {
+  
+  .fixed_map {
+    display: block;
+  }
+
+}
+
+@media (min-width: 680px) {
+
+  .fixed_phone {
+
+    img {
+      display: none;
+    }
+
+    span {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 880px) {
+  .fixed_btn {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fixed_callback {
+    display: block;
+  }
 }
