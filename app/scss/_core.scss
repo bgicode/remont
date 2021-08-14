@@ -20,5 +20,5 @@ body {
 }
 
 .wrap {
-	@include min-max(320px, 1140px, 15px);
+	@include min-max(300px, 1140px, 15px);
 }

@@ -44,9 +44,22 @@
     overflow: hidden;
   }
   
-  @function px-to-rem($size, $basicSize: 16px) {
+  /**@function px-to-rem($size, $basicSize: 16px) {
     @return $size / $basicSize#{rem};
+  }**/
+
+  $baseFontSize : 16;
+@function px-to-rem($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
   }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
   
   @mixin dynamicText($minSizePercent, $maxSize, $minSize, $minWidthPx, $maxWidth, $minWidth) {
     font-size: calc(#{$minSizePercent} + (#{$maxSize} - #{$minSize}) * (100vw - #{$minWidthPx}) / (#{$maxWidth} - #{$minWidth}));
@@ -55,8 +68,8 @@
   @mixin btn() {
     width: 100%;
     background-color: $primary;
-    font-size: px-to-rem(14px);
-    line-height: px-to-rem(18px);
+    font-size: px-to-rem(13);
+    line-height: px-to-rem(18);
     text-align: center;
     color: #2F2F2F;
     border-radius: 4px;
@@ -64,6 +77,8 @@
     display: block;
     padding-top: 8px;
     padding-bottom: 8px;
+    padding-left: 19px;
+    padding-right: 19px;
     text-decoration: none;
     transition-property: background-color;
     transition-duration: 500ms;

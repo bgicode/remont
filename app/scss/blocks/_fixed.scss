@@ -25,6 +25,10 @@
     flex-basis: 38px;
     flex-shrink: 0;
     cursor: pointer;
+
+    :last-child{
+      margin-bottom: 0px;
+    }
   
 
     span{
@@ -52,6 +56,17 @@
   display: none;
   margin: auto;
   margin-left: 0px;
+  p {
+    margin: 0;
+  }
+  :first-child{
+    font-size: px-to-rem(22);
+    line-height: px-to-rem(29);
+  }
+  :last-child{
+    font-size: px-to-rem(15);
+    line-height: px-to-rem(19);
+  }
 }
 
 .fixed_phone {
@@ -65,8 +80,9 @@
   }
   span {
     display: none;
-    font-size: px-to-rem(22px);
-    line-height: px-to-rem(28px);
+    font-size: px-to-rem(22);
+    line-height: px-to-rem(28);
+    font-weight: bold;
     color: $white
   }
 }
@@ -74,16 +90,16 @@
 .fixed_btn {  
   @include btn {
     display: none;
-    margin: auto;
+    margin: auto;   
     margin-right: 0px;
-    max-width: 146px;
+    max-width: 147px;
   }
 }
 
 .fixed_callback {
   display: none;
-  font-size: px-to-rem(14px);
-  line-height: px-to-rem(18px);
+  font-size: px-to-rem(14);
+  line-height: px-to-rem(18);
   margin-left: 15px;
   margin-right: 0px;
 
@@ -120,5 +136,20 @@
 @media (min-width: 1024px) {
   .fixed_callback {
     display: block;
+  }
+
+  .fixed_hamburger {
+    position: relative;
+    &::after {
+      content: "Меню";
+      font-weight: bold;
+      font-size: px-to-rem(19);
+      line-height: px-to-rem(25);
+      position: absolute;
+      right: -60px;
+      top: 50%;
+      transform: translateY(-50%);
+    
+    }
   }
 }
