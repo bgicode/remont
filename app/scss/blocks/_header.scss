@@ -1,0 +1,100 @@
+.header {
+    background: url("../images/screen-bg.jpg") 70% top no-repeat $black;
+    background-size: cover;
+    color: $white;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        background: linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 50.52%, #000000 100%), rgba(32, 32, 32, 0.66);
+        background-blend-mode: multiply, normal;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+.header_wrap {
+    padding-top: 1px;
+}
+
+.header_title {
+    font-family: $boldFont;
+    font-size: px-to-rem(32);
+    line-height:  px-to-rem(41);
+    color: $primary;
+    text-align: center;
+    margin-top: 119px;
+    margin-bottom: 24px;
+    font-weight: bold;
+}
+
+.header_subtitle {
+    font-family: $lightFont;
+    font-size: px-to-rem(20);
+    line-height:  px-to-rem(26);
+    text-align: center;
+    margin: 24px 0 42px 0;
+    font-weight: 100;
+    letter-spacing:  px-to-rem(1);
+}
+
+.header_work {
+    @include btn {
+        width: auto;
+        padding-top: 19px;
+        padding-bottom: 19px;
+        font-size: px-to-rem(16);
+        line-height: px-to-rem(21);
+        font-family: $boldFont;
+        font-weight: bold;
+    }   
+}
+
+.header_lider {
+    background: url("../images/rectangle.png") center no-repeat;
+    padding-top: 17px;
+    padding-bottom: 14px;
+    background-size: 288px 56px;
+    font-family: $lightFont;
+    letter-spacing: px-to-rem(0.3) ;
+    font-size: px-to-rem(14);
+    line-height: px-to-rem(18);
+    display: flex;
+    justify-content: space-between;    
+    margin: 36px auto 70px;
+    max-width: 288px;
+    position: relative;
+
+    &::after {
+        content:"";
+        background: url("../images/medal.png") center no-repeat;
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        left: 133px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    span {
+        &:nth-child(1){
+            margin-left: 41px;
+            text-align: center;
+            
+        }
+
+        &:nth-child(2){
+            margin: auto 37px auto 0;
+        }
+    }
+}
+
+.header_list {
+    margin-bottom: 0;
+    padding: 0;
+}
