@@ -22,6 +22,11 @@
     padding-top: 1px;
 }
 
+.header_wrap-two {
+    padding-bottom: 30px;
+    z-index: 1;
+}
+
 .header_title {
     font-family: $boldFont;
     font-size: px-to-rem(32);
