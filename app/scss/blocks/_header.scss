@@ -103,3 +103,84 @@
     margin-bottom: 0;
     padding: 0;
 }
+@media (min-resolution: 2dppx) {
+    
+    .header {
+        background-image: url("../images/screen-bg-2x.jpg") ;
+    }
+
+    .header_lider {
+
+        &::after {
+            background-image: url("../images/medal-2x.png");
+            background-size: cover;
+        }
+    }
+}
+
+@media (min-width: 580px) {
+
+    .header_buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 36px 0 70px;
+
+    } 
+
+    .header_lider {
+        flex-basis: 288px;
+        flex-shrink: 0;
+        margin: 0;
+    }
+
+    .header_work {
+        flex-basis: 248px;
+        max-width: 248px;
+        margin-right: 54px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .header_title {
+        font-size: px-to-rem(44);
+        line-height: px-to-rem(53);
+        br {
+            display: none;
+        }
+    }
+
+    .header_subtitle{
+        font-size: px-to-rem(28);
+        line-height: px-to-rem(32);
+    }
+
+}
+
+@media (min-width: 1024px) {
+    
+    .header_title {
+        font-size: px-to-rem(48);
+        line-height: px-to-rem(62);
+        padding-top: 85px;
+        margin-bottom: 12px;
+    }
+
+    .header_subtitle{
+        font-size: px-to-rem(35);
+        line-height: px-to-rem(45);
+        margin-top: 12px;
+        margin-bottom: 30px;
+    }
+
+    .header_wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100% - 255px);
+
+    }
+
+}
+
