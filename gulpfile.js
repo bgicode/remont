@@ -41,7 +41,8 @@ function images() {
 
 function scripts() {
   return src([
-    'node_modules/jquery/dist/jquery.js',    
+    'node_modules/jquery/dist/jquery.js',
+    'app/js/scrolloverflow.js',   
     'app/js/fullpage.js',
     'app/js/fullpageinit.js',
     'app/js/main.js'
