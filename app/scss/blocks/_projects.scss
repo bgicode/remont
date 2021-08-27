@@ -1,0 +1,84 @@
+.projects {
+    background: url("../images/list-of-works-bg.jpg") 70% top no-repeat $black;
+    background-size: cover;
+    color: $white;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.15) 50.52%, #000000 100%), rgba(32, 32, 32, 0.66);
+        background-blend-mode: multiply, normal;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+.projects_wrap {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    height: 100%;
+    position: relative;
+}
+
+.projects_slider {
+    padding-left: 2px;
+    padding-right: 2px;
+    box-sizing: border-box;
+}
+
+
+.projects_title {
+    font-family: $boldFont;
+    font-size: px-to-rem(32);
+    line-height: 116.3%;
+    text-align: center;
+    color: $primary;
+    margin: 0 0 28px 0;
+}
+
+.projects_example {
+    font-family: $lightFont;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    margin: 32px 0 24px 0;
+}
+
+.projects_gallery {
+    margin-top: 35px;
+}
+
+.projects_big {
+    margin-bottom: 3px;
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.projects-mini {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        text-decoration: none;
+        margin-right: 3px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+}
