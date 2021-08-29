@@ -32,6 +32,7 @@
 }
 
 
+
 .projects_title {
     font-family: $boldFont;
     font-size: px-to-rem(32);
@@ -39,6 +40,7 @@
     text-align: center;
     color: $primary;
     margin: 0 0 28px 0;
+    
 }
 
 .projects_example {
@@ -82,3 +84,89 @@
         height: auto;
     }
 }
+
+
+.projects_it-was, .projects_task, .projects_result {
+   margin-top: 20px;
+    p {
+        font-family: $lightFont;
+        font-size: px-to-rem(18);
+        line-height: px-to-rem(24);
+        margin-top: 0;
+
+        &:first-child {
+            font-family: $mediumFont;
+            font-size: px-to-rem(20);
+            line-height: px-to-rem(26);
+            margin-bottom: 13px; 
+        }
+    }
+
+}
+
+.projects_task {
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        
+    }
+
+    li{
+        font-family: $lightFont;
+        font-size: px-to-rem(18);
+        line-height: px-to-rem(24);
+        margin-bottom: 30px;
+        margin-top: 0;
+        position: relative;
+        padding-left: 20px;
+
+        &::after {
+            content: "";
+            width: 5px;
+            height: 7px;
+            background-color: $primary;
+            position: absolute;
+            left: 4px;
+            top: 10px;
+            transform: skew(-45deg);
+        }
+    }
+}
+
+.projects_object {
+    border: 1px solid #555555;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.projects_item {
+    font-family: $lightFont;
+    border-bottom: 1px solid #555555;
+    padding-left: 19px;
+    box-sizing: border-box;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    p{
+        margin: 0;
+        font-size: px-to-rem(15);
+        line-height: px-to-rem(19);
+        color: #C4C4C4;
+    }
+
+    span {
+        color: $white;
+        margin-left: 5px;
+    }
+
+}
+
